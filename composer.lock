@@ -4,8 +4,80 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "2fb2dcecb513807a22a52bed509c73bf",
     "packages": [
+        {
+            "name": "artesaos/defender",
+            "version": "0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artesaos/defender.git",
+                "reference": "e6db04bfefeb8549ec55bab6118848d15b1b5132"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artesaos/defender/zipball/e6db04bfefeb8549ec55bab6118848d15b1b5132",
+                "reference": "e6db04bfefeb8549ec55bab6118848d15b1b5132",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.4 || ~5.5",
+                "illuminate/database": "~5.4 || ~5.5",
+                "illuminate/http": "~5.4 || ~5.5",
+                "illuminate/support": "~5.4 || ~5.5",
+                "illuminate/view": "~5.4 || ~5.5",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~1.0",
+                "fzaninotto/faker": "~1.5",
+                "orchestra/database": "~3.4@dev",
+                "orchestra/testbench": "~3.4@dev",
+                "phpspec/phpspec": "~2.1",
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Artesaos\\Defender\\Providers\\DefenderServiceProvider"
+                    ],
+                    "aliases": {
+                        "Defender": "Artesaos\\Defender\\Facades\\Defender"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Artesaos\\Defender\\": "src/Defender/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreo Vieira",
+                    "email": "andreoav@gmail.com"
+                },
+                {
+                    "name": "Vagner do Carmo",
+                    "email": "vluzrmos@gmail.com"
+                },
+                {
+                    "name": "Luiz Vinicius Reis",
+                    "email": "luiz.vinicius73@gmail.com"
+                },
+                {
+                    "name": "Mauri de Souza Nunes",
+                    "email": "mauri870@gmail.com",
+                    "homepage": "https://mauri870.github.io"
+                }
+            ],
+            "description": "Roles & Permissions for Laravel 5",
+            "time": "2017-10-13T11:15:05+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",

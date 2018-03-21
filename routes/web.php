@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group([ 'prefix' => 'admin', 'middleware' => ['auth', 'needsRole:admin']], function() {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+});
