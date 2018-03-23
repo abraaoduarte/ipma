@@ -1,0 +1,17 @@
+@import "sb-admin/variables.scss";
+@import "sb-admin/mixins.scss";
+@import "sb-admin/global.scss";
+@import "sb-admin/utilities.scss";
+@import "sb-admin/navbar/navbar_global.scss";
+@import "sb-admin/navbar/navbar_fixed.scss";
+@import "sb-admin/navbar/navbar_static.scss";
+@import "sb-admin/navbar/navbar_toggle.scss";
+@import "sb-admin/navbar/navbar_colors.scss";
+@import "sb-admin/cards.scss";
+@import "sb-admin/login.scss";
+@import "sb-admin/footer.scss";
+
+// Outros Arquivos
+@import "bootstrap/scss/bootstrap";
+@import "admin";
+@import "font-awesome/scss/font-awesome";
