@@ -11,13 +11,13 @@
   <link href="{{ versioned_asset('css/sb-admin.css')}}" rel="stylesheet">
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
-    @include('partials.menu')
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+    @include('partials.site.admin.menu')
   <div class="content-wrapper">
     <div class="container-fluid">
       @yield('content')
     </div>
-    @include('partials.footer')
+    @include('partials.site.admin.footer')
 
     <script src="{{ versioned_asset('js/libs.js') }}"></script>
     @yield('scripts')

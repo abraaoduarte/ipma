@@ -24,7 +24,7 @@ Route::group([ 'prefix' => 'admin', 'middleware' => ['auth', 'needsRole:admin']]
 });
 
 Route::get('admin/inicio', function () {
-    return view('admin.index');
+    return view('site.admin.index');
 });
 
 Auth::routes();

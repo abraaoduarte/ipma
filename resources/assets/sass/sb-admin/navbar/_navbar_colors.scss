@@ -8,6 +8,8 @@
       }
       > .nav-item {
         > .nav-link {
+          padding: 12px 15px;
+          margin: 0;
           color: $gray-600;
           &:hover {
             color: $gray-500;

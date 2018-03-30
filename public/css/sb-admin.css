@@ -236,6 +236,8 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   color: #868e96; }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+  padding: 12px 15px;
+  margin: 0;
   color: #868e96; }
   #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
     color: #adb5bd; }

@@ -60,6 +60,12 @@
             <span class="nav-link-text">Recursos</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Usuários">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-users"></i>
+            <span class="nav-link-text">Usuários</span>
+          </a>
+        </li>
       </ul>
         <ul class="navbar-nav sidenav-toggler">
             <li class="nav-item">
@@ -68,6 +74,6 @@
             </a>
             </li>
         </ul>
-    @include('partials.header')
+    @include('partials.site.admin.header')
     </div>
 </nav>
