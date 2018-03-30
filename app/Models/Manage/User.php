@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Manage;
 
 use Artesaos\Defender\Traits\HasDefender;
 use Illuminate\Notifications\Notifiable;
@@ -34,11 +34,11 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany('App\Models\Role');
+        return $this->belongsToMany('App\Models\Manage\Role');
     }
 
     public function permissions()
     {
-        return $this->belongsToMany('App\Models\Permission');
+        return $this->belongsToMany('App\Models\Manage\Permission');
     }
 }

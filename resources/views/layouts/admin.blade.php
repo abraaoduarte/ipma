@@ -9,6 +9,7 @@
   <meta name="author" content="">
   <title>@yield('title') - IPMA Admin</title>
   <link href="{{ versioned_asset('css/sb-admin.css')}}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">

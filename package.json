@@ -21,10 +21,12 @@
     },
     "dependencies": {
         "bootstrap": "4.0.0",
+        "datatables.net-bs4": "^1.10.16",
         "font-awesome": "^4.7.0",
         "gulp-concat": "^2.6.1",
         "gulp-rename": "^1.2.2",
         "gulp-sass": "^3.1.0",
-        "gulp-sourcemaps": "^2.6.4"
+        "gulp-sourcemaps": "^2.6.4",
+        "sweetalert": "^2.1.0"
     }
 }

@@ -60,10 +60,10 @@
             <span class="nav-link-text">Recursos</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Usuários">
-          <a class="nav-link" href="tables.html">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Controle de Acesso">
+        <a class="nav-link" href="{{ route('dashboard.usuarios') }}">
             <i class="fa fa-fw fa-users"></i>
-            <span class="nav-link-text">Usuários</span>
+            <span class="nav-link-text">Controle de Acesso</span>
           </a>
         </li>
       </ul>

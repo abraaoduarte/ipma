@@ -23,6 +23,11 @@ Route::group([ 'prefix' => 'admin', 'middleware' => ['auth', 'needsRole:admin']]
     });
 });
 
+Route::group([ 'prefix' => 'admin/users', 'middleware' => ['auth', 'needsRole:Administrador']], function() {
+    Route::get('dashborad', 'Manage\DashboardController@index')
+        ->name('dashboard.usuarios');
+});
+
 Route::get('admin/inicio', function () {
     return view('site.admin.index');
 });
