@@ -27,7 +27,8 @@
                     <strong>Gerenciar Usuários</strong>
                 </div>
                 <div class="card-body">
-                    <a href="#" class="btn btn-block btn-secondary text-center">
+                    <a href="{{ route('usuarios') }}"
+                        class="btn btn-block btn-secondary text-center">
                         Usuários
                     </a>
                 </div>

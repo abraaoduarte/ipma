@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>@yield('title') - IPMA Admin</title>
+  <title>@yield('title') - IPMA</title>
   <link href="{{ versioned_asset('css/sb-admin.css')}}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>

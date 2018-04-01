@@ -1,0 +1,31 @@
+{
+    "sEmptyTable": "Nenhum registro encontrado",
+    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+    "sInfoPostFix": "",
+    "sInfoThousands": ".",
+    "sLengthMenu": "Exibir: _MENU_",
+    "sLoadingRecords": "Carregando...",
+    "sProcessing": "",
+    "sZeroRecords": "Nenhum registro encontrado",
+    "sSearch": "<div class='input-group'>_INPUT_<span class='input-group-addon'><i class='ion ion-android-search'></i> </span></div>",
+    "searchPlaceholder" : "Pesquisar...",
+    "oPaginate": {
+        "sNext": "Próximo",
+        "sPrevious": "Anterior",
+        "sFirst": "Primeiro",
+        "sLast": "Último"
+    },
+    "oAria": {
+        "sSortAscending": ": Ordenar colunas de forma ascendente",
+        "sSortDescending": ": Ordenar colunas de forma descendente"
+    },
+    "buttons":{
+        "colvis": "<i class='ion ion-navicon-round fa-rotate-90'></i>",
+        "copy": "Copiar",
+        "print": "Imprimir",
+        "reset": "Redefinir",
+        "reload": "Recarregar"
+    }
+}

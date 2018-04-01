@@ -16,7 +16,7 @@ class UserDataTable extends DataTable
     public function dataTable($query)
     {
         return datatables($query)
-            ->addColumn('action', 'userdatatable.action');
+            ->addColumn('action', 'manage.users.datatables_actions');
     }
 
     /**
@@ -39,10 +39,51 @@ class UserDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-                    ->columns($this->getColumns())
-                    ->minifiedAjax()
-                    ->addAction(['width' => '80px'])
-                    ->parameters($this->getBuilderParameters());
+            ->columns($this->getColumns())
+            ->ajax('')
+            ->parameters([
+                'order' => [1, 'asc'],
+                'responsive'=> 'true',
+                "initComplete" => 'function (oSettings) {
+                    max = this.api().columns().count();
+                    this.api().columns().every(function (col) {
+                        if((col+1)<max){
+                            var column = this;
+                            var input = document.createElement("input");
+                            $(input).attr(\'placeholder\',\'Filtrar...\');
+                            $(input).addClass(\'form-control\');
+                            $(input).css(\'width\',\'100%\');
+                            $(input).appendTo($(column.footer()).empty())
+                            .on(\'change\', function () {
+                                column.search($(this).val(), false, false, true).draw();
+                            });
+                        }
+                    });
+                    stateValuesOnFilters(oSettings);
+                }' ,
+                'dom' => 'Bfrltpi',
+                'stateSave' => true,
+                'scrollX' => false,
+                'language'=> [
+                    "url"=> asset("vendor/datatables/Portuguese-Brasil.json")
+                ],
+                'buttons' => [
+                    'print',
+                    'reset',
+                    'reload',
+                    [
+                         'extend'  => 'collection',
+                        'className' => 'buttons-export',
+                         'text'    => '<i class="ion ion-android-download"></i>',
+                         'buttons' => [
+                             'csv',
+                             'excel',
+                             'pdf',
+                         ],
+                    ],
+                    'colvis'
+                ]
+            ]);
     }
 
     /**
@@ -55,7 +96,16 @@ class UserDataTable extends DataTable
         return [
             'id',
             'created_at',
-            'updated_at'
+            'updated_at',
+            'action' => [
+                'title' => '',
+                'printable' => false,
+                'exportable' => false,
+                'searchable' => false,
+                'orderable' => false,
+                'width'=>'10%',
+                'class' => 'all text-center'
+            ]
         ];
     }
 

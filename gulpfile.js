@@ -26,8 +26,6 @@ gulp.task('scripts', function() {
     'node_modules/popper.js/dist/umd/popper.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'resources/assets/js/sb-admin.js',
-    'node_modules/datatables.net/js/jquery.dataTables.js',
-    'node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js',
   ])
   .pipe(sourcemaps.init())
   .pipe(concat('libs.js'))

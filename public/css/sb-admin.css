@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url(datatables.net-bs4/css/dataTables.bootstrap4.css);
+@import url(datatables.net-dt/css/jquery.dataTables.css);
+@import url(datatables.net-responsive-dt/css/responsive.dataTables.min.css);
 html {
   position: relative;
   min-height: 100%; }
