@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+/*const gulp = require('gulp');
 const sass = require('gulp-sass');
 const rename = require("gulp-rename");
 const concat = require('gulp-concat');
@@ -31,4 +31,4 @@ gulp.task('scripts', function() {
   .pipe(concat('libs.js'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('public/js'));
-});
+});*/

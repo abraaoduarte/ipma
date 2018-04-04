@@ -21,6 +21,8 @@
     },
     "dependencies": {
         "bootstrap": "4.0.0",
+        "datatables.net-bs4": "^1.10.16",
+        "datatables.net-dt": "^1.10.16",
         "font-awesome": "^4.7.0",
         "gulp-concat": "^2.6.1",
         "gulp-rename": "^1.2.2",

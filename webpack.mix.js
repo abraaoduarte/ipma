@@ -11,5 +11,15 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.sass('resources/assets/sass/sb-admin.scss', 'public/css', {
+    includePaths: ['node_modules']
+});
+
+mix.scripts([
+    'node_modules/jquery/dist/jquery.min.js',
+	'node_modules/popper.js/dist/umd/popper.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/datatables.net/js/jquery.dataTables.js',
+    'node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js',
+    'resources/assets/js/sb-admin.js'
+], 'public/js/template.js');

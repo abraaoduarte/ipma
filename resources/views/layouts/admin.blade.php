@@ -20,7 +20,7 @@
     </div>
     @include('partials.site.admin.footer')
 
-    <script src="{{ versioned_asset('js/libs.js') }}"></script>
+    <script src="{{ versioned_asset('js/template.js') }}"></script>
     @yield('scripts')
   </div>
 </body>

@@ -16,7 +16,12 @@ class UserDataTable extends DataTable
     public function dataTable($query)
     {
         return datatables($query)
-            ->addColumn('action', 'manage.users.datatables_actions');
+            ->editColumn('action', 'manage.users.datatables_actions')
+            ->editColumn('is_active', '{!! $is_active?\'<i class="fa fa-check text-success"></i>\':\'<i class="fa fa-times text-danger"></i>\' !!}')
+            ->editColumn('created_at', function ($obj) {
+                return $obj->created_at->format('d/m/Y');
+            })
+            ->rawColumns(['is_active', 'action']);
     }
 
     /**
@@ -42,46 +47,13 @@ class UserDataTable extends DataTable
             ->columns($this->getColumns())
             ->ajax('')
             ->parameters([
-                'order' => [1, 'asc'],
+                'order' => [1,'asc'],
                 'responsive'=> 'true',
-                "initComplete" => 'function (oSettings) {
-                    max = this.api().columns().count();
-                    this.api().columns().every(function (col) {
-                        if((col+1)<max){
-                            var column = this;
-                            var input = document.createElement("input");
-                            $(input).attr(\'placeholder\',\'Filtrar...\');
-                            $(input).addClass(\'form-control\');
-                            $(input).css(\'width\',\'100%\');
-                            $(input).appendTo($(column.footer()).empty())
-                            .on(\'change\', function () {
-                                column.search($(this).val(), false, false, true).draw();
-                            });
-                        }
-                    });
-                    stateValuesOnFilters(oSettings);
-                }' ,
                 'dom' => 'Bfrltpi',
                 'stateSave' => true,
                 'scrollX' => false,
                 'language'=> [
                     "url"=> asset("vendor/datatables/Portuguese-Brasil.json")
-                ],
-                'buttons' => [
-                    'print',
-                    'reset',
-                    'reload',
-                    [
-                         'extend'  => 'collection',
-                        'className' => 'buttons-export',
-                         'text'    => '<i class="ion ion-android-download"></i>',
-                         'buttons' => [
-                             'csv',
-                             'excel',
-                             'pdf',
-                         ],
-                    ],
-                    'colvis'
                 ]
             ]);
     }
@@ -94,16 +66,48 @@ class UserDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'id',
-            'created_at',
-            'updated_at',
+            'id' => [
+                'title' => 'ID',
+                'name' => 'id',
+                'data' => 'id',
+                'width'=>'1%',
+                'class' => 'text-center'
+            ],
+            'name' => [
+                'title' => 'Usuário',
+                'name' => 'name',
+                'data' => 'name',
+                'width'=>'15%',
+                'class' => 'text-left'
+            ],
+            'email' => [
+                'title' => 'Email',
+                'name' => 'email',
+                'data' => 'email',
+                'width'=>'15%',
+                'class' => 'text-left'
+            ],
+            'is_active' => [
+                'title' => 'Ativo',
+                'name' => 'is_active',
+                'data' => 'is_active',
+                'width'=>'1%',
+                'class' => 'text-center'
+            ],
+            'created_at' => [
+                'title' => 'Criado Em',
+                'name' => 'created_at',
+                'data' => 'created_at',
+                'width'=>'8%',
+                'class' => 'text-left'
+            ],
             'action' => [
                 'title' => '',
                 'printable' => false,
                 'exportable' => false,
                 'searchable' => false,
                 'orderable' => false,
-                'width'=>'10%',
+                'width'=>'1%',
                 'class' => 'all text-center'
             ]
         ];

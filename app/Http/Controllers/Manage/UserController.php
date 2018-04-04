@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Manage;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\DataTables\Site\UserDataTable;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(UserDataTable $userDataTable)
     {
-        return view('manage.users.index');
+        return $userDataTable->render('manage.users.index');
     }
 }

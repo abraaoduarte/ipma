@@ -21,7 +21,7 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-
+            @include('manage.users.table')
         </div>
     </div>
 @endsection
